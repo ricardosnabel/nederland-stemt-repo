@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import '../styles/styles.css'
+import '../assets/styles/styles.css'
 
 const Navbar = () => {
     return (
@@ -29,7 +29,5 @@ const Navbar = () => {
     );
 
 };
-
-// Log in pagina, bevat een titel, invultekst voor gebruikersnaam en wachtwoord en een link om te registreren
 
 export default Navbar;
