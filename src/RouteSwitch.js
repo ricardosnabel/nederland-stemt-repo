@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './App'
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Login from './pages/Login/Login';
-import Signup from './pages/Signup/Signup';
-import Navbar from './components/Navbar';
+import App from './App.js'
+import Home from './pages/Home/Home.js';
+import About from './pages/About/About.js';
+import Login from './pages/Login/Login.js';
+import Signup from './pages/Signup/Signup.js';
+import Navbar from './components/Navbar.js';
 
 const RouteSwitch = () => {
     return (

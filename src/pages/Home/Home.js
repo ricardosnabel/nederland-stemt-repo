@@ -1,5 +1,5 @@
 import React from 'react';
-import Subject from '../Subject/Subject';
+import Subject from '../Subject/Subject.js';
 
 function Home() {
 

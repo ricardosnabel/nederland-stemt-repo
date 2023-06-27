@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Votings from '../../components/Votings';
+import Votings from '../../components/Votings.js';
 
 function Subject() {
     const shownSubjects = [{name: "Cola", shown: false}, {name: "Water", shown: false}, {name: "Bier", shown: false},];
@@ -35,14 +35,14 @@ function Subject() {
         <br></br>
         <ul>
             {isShown.map((show, index) => (
-                <li key={index}>
+                <label key={index}>
                     <button onClick={handleClick} name={show.name}>{show.name}</button>
                     {show.shown && (<Votings 
                                     selectedOption={selectedOption}
                                     handleEvent={handleEvent}
                                     voteCount={show.name === "Cola" ? voteCountCola : show.name === "Water" ? voteCountWater : voteCountBeer}
                                     setVoteCount={show.name === "Cola" ? setVoteCountCola : show.name === "Water" ? setVoteCountWater : setVoteCountBeer}/>)}
-                </li>
+                </label>
             ))}
         </ul>
     </div>
