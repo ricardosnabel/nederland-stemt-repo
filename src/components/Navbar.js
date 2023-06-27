@@ -21,7 +21,7 @@ const Navbar = () => {
                         <Link to='/login'>Login</Link>
                     </li>
                     <li className="navitems">
-                        <Link to='/register'>Registreer</Link>
+                        <Link to='/signup'>Registreer</Link>
                     </li>
                 </ul>
             </nav>

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
 
-function Votings(props){
+function Votings({selectedOption, handleEvent, voteCount, setVoteCount}){
     const [isShown, setIsShown] = useState(false);
 
     const handleClick = event => {
-        props.setVoteCount(
-            props.voteCount.map((brand) =>
-                props.selectedOption === brand.name
+        setVoteCount(
+            voteCount.map((brand) =>
+                selectedOption === brand.name
                     ? { ...brand, count: brand.count + 1}
                     : { ...brand}
             )
@@ -19,9 +19,9 @@ function Votings(props){
         <div>
             {!isShown && (
                 <div>
-                    {props.voteCount.map((brand, index) => (
+                    {voteCount.map((brand, index) => (
                         <label key={index}>
-                            <input type="radio" name={brand.name} checked={props.selectedOption === brand.name} onChange={props.handleEvent}/>
+                            <input type="radio" name={brand.name} checked={selectedOption === brand.name} onChange={handleEvent}/>
                             {brand.name}
                         </label>
                     ))}
@@ -34,7 +34,7 @@ function Votings(props){
                 (<p>
                     Resultaten:
                     <ul>
-                    {props.voteCount.map((brand, index) => (
+                    {voteCount.map((brand, index) => (
                         <label key={index}>
                             {brand.name}: {brand.count}
                         </label>

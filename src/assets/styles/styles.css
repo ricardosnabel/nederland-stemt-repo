@@ -14,13 +14,14 @@ nav {
 
 li {
   margin: 10px;
-  cursor: pointer;
+  list-style: none;
 }
 
 a {
   text-decoration: none;
   color: #3b4333;
   font-size: 18px;
+  cursor: pointer;
 }
 
 #header {

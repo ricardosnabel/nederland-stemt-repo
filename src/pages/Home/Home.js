@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Subject from '../Subject/Subject.js';
+import VoteData from '../../data/VoteData';
 
 function Home() {
-
+    const subjects = [{name: "Drinken", description: "Iedereen heeft altijd een mening over welke drankjes het lekkerste is. Dit zal eens en voor al verleden tijd zijn!"},
+                      {name: "Eten", description: "Wat gaat het vanavond worden?"},
+                      {name: "Vrije Tijd", description: "Waar haal je de tijd vandaan joh?!"},
+                      {name: "Films", description: "Gezelmozzarel op de bank!"}];
 
     return (
         <div id="container">
@@ -14,7 +18,11 @@ function Home() {
                     </p>
                 </div>
                 <h2 id="subjectheader">Onderwerpen</h2>
-                <Subject />
+                {subjects.map((subject, index) => (
+                <li key={index}>
+                    <VoteData subjectname={subject.name} subjectdescription={subject.description}/>
+                </li>
+            ))}
             </div>
         </div>
     );
