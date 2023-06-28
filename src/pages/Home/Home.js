@@ -17,7 +17,7 @@ function Home() {
                     Klik op een onderwerp om een stem uit te brengen.
                     </p>
                 </div>
-                <h2 id="subjectheader">Onderwerpen</h2>
+                <h2 id="containerheader">Onderwerpen</h2>
                 {subjects.map((subject, index) => (
                 <li key={index}>
                     <VoteData subjectname={subject.name} subjectdescription={subject.description}/>

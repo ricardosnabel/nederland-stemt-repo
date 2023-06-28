@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo} from 'react';
+import React, { useState } from 'react';
 import Votings from '../../components/Votings';
 
 function Subject({isShown, voteCount, setVoteCount, handleClick}) {
@@ -11,7 +11,6 @@ function Subject({isShown, voteCount, setVoteCount, handleClick}) {
     return (
         <>
             <ul>
-            
             {isShown.map((show, index) => (
                 <li key={index}>
                     <button onClick={handleClick} name={show.name}>{show.name}</button>

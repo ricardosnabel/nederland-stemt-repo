@@ -51,10 +51,9 @@ function VoteData({subjectname, subjectdescription}){
     }
 
     return(
-        <div id="subjectitems">
+        <div id="containercard">
             <h3>{subjectname}</h3>
             <p>{subjectdescription}</p>
-            {console.log(voteCount)}
             <Subject setData={memiozedData} isShown={isShown} voteCount={voteCount} setVoteCount={setVoteCount} handleClick={handleClick}/>
         </div>
     );

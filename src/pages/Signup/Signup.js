@@ -1,17 +1,14 @@
-const Signup = () => {
+import SignupForm from "../../components/form/SignupForm";
+
+function Signup() {
     return (
-        <div>
-            <form>
-                <label>Voornaam</label>
-                <input type="text"></input>
-                <label>Achternaam</label>
-                <input type="text"></input>
-                <label>E-mailadres</label>
-                <input type="email"></input>
-                <label>Wachtwoord</label>
-                <input type="password"></input>
-                <button>Registreer</button>
-            </form>
+        <div id="container">
+            <div id="content">
+                <div id="title">
+                    <h1>Maak een account!</h1>
+                </div>
+                <SignupForm />
+            </div>
         </div>
     );
 
